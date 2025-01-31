@@ -33,7 +33,7 @@ public class LoanInquiryServiceImpl implements LoanInquiryService {
 	public ResponseLoanInquiry inquiryLoanByCustomer(RequestLoanInquiryByCustomerDetail request) {
 		ResponseLoanInquiry response = new ResponseLoanInquiry();
 		CustomerDTO customerInquiryResult = null;
-		Optional<Customer> customerLoanInquiryResult = customerRepository.findById(null);
+		Optional<Customer> customerLoanInquiryResult = customerRepository.findById(request.getExistingCustomerId());
 		if (customerLoanInquiryResult.isPresent()) {
 			Customer customerLoanDetail = customerLoanInquiryResult.get();
 			customerInquiryResult = coreMapper.toCustomerDto(customerLoanDetail);

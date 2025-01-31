@@ -11,6 +11,7 @@ public class LoanPaymentServiceImpl implements LoanPaymentService {
 	private static String FAILURE_MESSAGE = "An error occured during the payment process.";
 	
 	public ResponsePaymentStatus operatePaymentProcess(RequestLoanPayment request) {
+		//To be implemented 
 		return null;
 	}
 	
