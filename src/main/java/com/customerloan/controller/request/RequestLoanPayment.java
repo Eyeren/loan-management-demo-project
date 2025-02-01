@@ -10,8 +10,8 @@ import lombok.Setter;
 @Getter
 @Setter
 public class RequestLoanPayment {
-	@NotNull(message = "id (loan_id) cannot be null.")
-	private Long id;
+	@NotNull(message = "loan_id cannot be null.")
+	private Long loanId;
 	@NotNull(message = "paymentAmount cannot be null.")
     private BigDecimal paymentAmount;
 }

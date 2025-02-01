@@ -1,6 +1,10 @@
 package com.customerloan.constant;
 
 public final class Constant {
+	public static final int INT_ZERO = 0;
+	public static final int INT_ONE = 1;
+	public static final int INT_TWO = 2;
+	public static final int INT_THREE = 3;
 	public final class EntityName {
 		public static final String CUSTOMER_ENTITY= "CUSTOMER";
 		public static final String LOAN_ENTITY= "LOAN";
