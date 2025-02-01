@@ -15,13 +15,10 @@ import org.springframework.util.CollectionUtils;
 import com.customerloan.constant.Constant;
 import com.customerloan.controller.request.RequestLoanPayment;
 import com.customerloan.controller.response.ResponsePaymentStatus;
-import com.customerloan.dao.entity.Customer;
 import com.customerloan.dao.entity.Loan;
 import com.customerloan.dao.entity.LoanInstallment;
-import com.customerloan.dao.repository.CustomerRepository;
 import com.customerloan.dao.repository.LoanInstallmentRepository;
 import com.customerloan.dao.repository.LoanRepository;
-import com.customerloan.dto.CustomerDTO;
 import com.customerloan.dto.LoanDTO;
 import com.customerloan.dto.LoanInstallmentDTO;
 import com.customerloan.service.loanpayment.intf.LoanPaymentService;
@@ -38,8 +35,8 @@ public class LoanPaymentServiceImpl implements LoanPaymentService {
 	private final String UNSUCCESSFUL_PAYMENT_MESSAGE = "Payment attempt failed due to that conditions not provided.";
 	private final String INSUFFICIENT_PAYMENT_AMOUNT_MESSAGE = "Payment amount is insufficient to pay any installment.";
 	
-	public ResponsePaymentStatus operatePaymentProcess(RequestLoanPayment request) {
-		ResponsePaymentStatus response = new ResponsePaymentStatus();
+	public ResponsePaymentStatus operatePaymentProcess(RequestLoanPayment request) { 
+		ResponsePaymentStatus response = new ResponsePaymentStatus(); 
 		LoanDTO loanDTO = findRecordedLoanInformationIfExists(request.getLoanId());
 		if (loanDTO != null) {
 			if (isLoanInstallmentListOpenAndAvailableToBePaid(loanDTO, request.getPaymentAmount()))  {
@@ -77,7 +74,7 @@ public class LoanPaymentServiceImpl implements LoanPaymentService {
 				return response;
 			}
 		}
-		return null;
+		return null;  
 	}
 	
 	private LoanDTO findRecordedLoanInformationIfExists (Long loanId) {
