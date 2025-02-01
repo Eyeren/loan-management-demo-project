@@ -27,7 +27,6 @@ public class CustomerLoanApplicationServiceImpl implements CustomerLoanApplicati
 	public CustomerLoanApplicationCommonValidationServiceImpl commonValidationService;
 	@Autowired
 	public CustomerRepository customerRepository;
-	@Autowired
 	public CoreMapper coreMapper;
 	
 	

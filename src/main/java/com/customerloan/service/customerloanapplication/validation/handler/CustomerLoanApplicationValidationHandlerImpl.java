@@ -1,9 +1,12 @@
 package com.customerloan.service.customerloanapplication.validation.handler;
 
+import org.springframework.stereotype.Service;
+
 import com.customerloan.controller.request.RequestCreateLoan;
 import com.customerloan.controller.response.ResponseCreateLoanStatus;
 import com.customerloan.service.customerloanapplication.validation.handler.intf.CustomerLoanApplicationValidationHandler;
 
+@Service
 public abstract class CustomerLoanApplicationValidationHandlerImpl implements CustomerLoanApplicationValidationHandler {
 	public CustomerLoanApplicationValidationHandler validationHandler;	
 	

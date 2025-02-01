@@ -1,11 +1,15 @@
 package com.customerloan.service.customerloanapplication.validation;
 
 import java.math.BigDecimal;
+
+import org.springframework.stereotype.Service;
+
 import com.customerloan.controller.request.RequestCreateLoan;
 import com.customerloan.controller.response.ResponseCreateLoanStatus;
 import com.customerloan.dto.CustomerDTO;
 import com.customerloan.service.customerloanapplication.validation.handler.CustomerLoanApplicationValidationHandlerImpl;
 
+@Service
 public class ApplicationCustomerCreditLimitValidationServiceImpl extends CustomerLoanApplicationValidationHandlerImpl {
 	private static final String CUSTOMER_CREDIT_LIMIT_NOT_SUFFICIENT = "Customer Credit Limit not sufficient.";
 	private static final String REQUESTED_CREDIT_LIMIT_EXCESS = "Requested Loan Amount must be less than the permitted customer limit";

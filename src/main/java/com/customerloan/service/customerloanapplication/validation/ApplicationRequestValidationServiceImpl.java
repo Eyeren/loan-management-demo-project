@@ -1,9 +1,12 @@
 package com.customerloan.service.customerloanapplication.validation;
 
+import org.springframework.stereotype.Service;
+
 import com.customerloan.controller.request.RequestCreateLoan;
 import com.customerloan.controller.response.ResponseCreateLoanStatus;
 import com.customerloan.service.customerloanapplication.validation.handler.CustomerLoanApplicationValidationHandlerImpl;
 
+@Service
 public class ApplicationRequestValidationServiceImpl extends CustomerLoanApplicationValidationHandlerImpl {
 	private static final String REQUESTED_CUSTOMER_INFO_NOT_VALIDATED = "Request is invalid. Requested Customer Information must be provided.";
 	private static final String REQUESTED_LOAN_AMOUNT_INFO_NOT_VALIDATED = "Request is invalid. Requested Loan Information must be provided.";

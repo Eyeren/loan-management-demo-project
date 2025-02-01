@@ -3,6 +3,7 @@ package com.customerloan.service.customerloanapplication.validation;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.customerloan.controller.request.RequestCreateLoan;
 import com.customerloan.controller.response.ResponseCreateLoanStatus;
@@ -12,9 +13,9 @@ import com.customerloan.dto.CustomerDTO;
 import com.customerloan.service.customerloanapplication.validation.handler.CustomerLoanApplicationValidationHandlerImpl;
 import com.customerloan.util.CoreMapper;
 
+@Service
 public class ApplicationCustomerRecordValidationServiceImpl extends CustomerLoanApplicationValidationHandlerImpl {
 	private static final String CUSTOMER_RECORD_NOT_FOUND = "Customer Record not found with given customer id.";
-	@Autowired
 	public CoreMapper coreMapper;
 	@Autowired
 	public CustomerRepository customerRepository;
