@@ -15,13 +15,10 @@ import org.springframework.util.CollectionUtils;
 import com.customerloan.constant.Constant;
 import com.customerloan.controller.request.RequestLoanPayment;
 import com.customerloan.controller.response.ResponsePaymentStatus;
-import com.customerloan.dao.entity.Customer;
 import com.customerloan.dao.entity.Loan;
 import com.customerloan.dao.entity.LoanInstallment;
-import com.customerloan.dao.repository.CustomerRepository;
 import com.customerloan.dao.repository.LoanInstallmentRepository;
 import com.customerloan.dao.repository.LoanRepository;
-import com.customerloan.dto.CustomerDTO;
 import com.customerloan.dto.LoanDTO;
 import com.customerloan.dto.LoanInstallmentDTO;
 import com.customerloan.service.loanpayment.intf.LoanPaymentService;
@@ -77,7 +74,7 @@ public class LoanPaymentServiceImpl implements LoanPaymentService {
 				return response;
 			}
 		}
-		return null;
+		return null;  
 	}
 	
 	private LoanDTO findRecordedLoanInformationIfExists (Long loanId) {
