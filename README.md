@@ -1,1 +1,0 @@
-# loan-management-demo-project
