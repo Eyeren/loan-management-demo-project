@@ -35,7 +35,7 @@ public class LoanPaymentServiceImpl implements LoanPaymentService {
 	private final String UNSUCCESSFUL_PAYMENT_MESSAGE = "Payment attempt failed due to that conditions not provided.";
 	private final String INSUFFICIENT_PAYMENT_AMOUNT_MESSAGE = "Payment amount is insufficient to pay any installment.";
 	
-	public ResponsePaymentStatus operatePaymentProcess(RequestLoanPayment request) {
+	public ResponsePaymentStatus operatePaymentProcess(RequestLoanPayment request) { 
 		ResponsePaymentStatus response = new ResponsePaymentStatus();
 		LoanDTO loanDTO = findRecordedLoanInformationIfExists(request.getLoanId());
 		if (loanDTO != null) {
