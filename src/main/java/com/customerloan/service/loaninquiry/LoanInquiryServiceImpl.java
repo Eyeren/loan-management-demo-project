@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 import com.customerloan.controller.request.RequestLoanInquiryByCustomerDetail;
 import com.customerloan.controller.request.RequestLoanInquiryByLoanDetail;
@@ -30,6 +31,7 @@ public class LoanInquiryServiceImpl implements LoanInquiryService {
 	public LoanRepository loanRepository;
 	public CoreMapper coreMapper;
 	
+	@Transactional
 	public ResponseLoanInquiry inquiryLoanByCustomer(RequestLoanInquiryByCustomerDetail request) {
 		ResponseLoanInquiry response = new ResponseLoanInquiry();
 		CustomerDTO customerInquiryResult = null;

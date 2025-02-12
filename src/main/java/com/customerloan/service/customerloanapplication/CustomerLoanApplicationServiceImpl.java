@@ -7,6 +7,7 @@ import java.util.Collections;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
 import com.customerloan.controller.request.RequestCreateLoan;
@@ -30,6 +31,7 @@ public class CustomerLoanApplicationServiceImpl implements CustomerLoanApplicati
 	public CoreMapper coreMapper;
 	
 	
+	@Transactional
 	public ResponseCreateLoanStatus createLoan(RequestCreateLoan request) {
 		ResponseCreateLoanStatus responseCreateLoanStatus = commonValidationService.validateApplication(request);
 		if (responseCreateLoanStatus.isLoanApplicationCompletedSuccessful()) {
