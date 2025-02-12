@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
 import com.customerloan.constant.Constant;
@@ -35,6 +36,7 @@ public class LoanPaymentServiceImpl implements LoanPaymentService {
 	private final String UNSUCCESSFUL_PAYMENT_MESSAGE = "Payment attempt failed due to that conditions not provided.";
 	private final String INSUFFICIENT_PAYMENT_AMOUNT_MESSAGE = "Payment amount is insufficient to pay any installment.";
 	
+	@Transactional
 	public ResponsePaymentStatus operatePaymentProcess(RequestLoanPayment request) { 
 		ResponsePaymentStatus response = new ResponsePaymentStatus(); 
 		LoanDTO loanDTO = findRecordedLoanInformationIfExists(request.getLoanId());
